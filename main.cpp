@@ -15,7 +15,7 @@ void printSum() {
   printf("Enter a number: ");
   fgets(line, 10, stdin);
 
-  if (line != NULL) strtok(line, "\n");
+  if (strcmp(line, "\0")) strtok(line, "\n");
 
   sprintf(buf, "sum=%d", sum_to_n(atoi(line)));
   printf("%s\n", buf);
